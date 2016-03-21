@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('EST');
+
 /**
  * Agencies list info, including sub-agencies and terms
  * used to get terms tree for agency before each CKAN import

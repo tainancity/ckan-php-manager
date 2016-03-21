@@ -8,8 +8,6 @@ ini_set('display_errors', 1);
 set_time_limit(60 * 30);
 ini_set('memory_limit', '1500M');
 
-date_default_timezone_set('EST');
-
 if (!defined('CKANMNGR_ROOT_DIR')) {
     define('CKANMNGR_ROOT_DIR', dirname(__DIR__));
 }

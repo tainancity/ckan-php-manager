@@ -7,3 +7,4 @@ backup/
 results/2*
 results/*.json
 data/old/
+nbproject
