@@ -30,10 +30,6 @@ $CkanManager->resultsDir = $results_dir;
 define('ERROR_REPORTING', E_ALL & ~E_NOTICE);
 
 //  https://explore.data.gov/api/views/bxfh-jivs.json
-/**
- *
- */
-define('SOCRATA_URL', 'https://explore.data.gov/api/views/');
 
 if (!is_readable($socrata_file_path = CKANMNGR_DATA_DIR . '/socrata.txt')) {
     die($socrata_file_path . ' not readable');

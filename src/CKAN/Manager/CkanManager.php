@@ -1114,7 +1114,7 @@ class CkanManager
         fputcsv($fp_popularity, $csv_header);
         fputcsv($fp_relevance, $csv_header);
 
-        $ckan_url = 'https://catalog.data.gov/dataset/';
+        $ckan_url = CKAN_URL;
         $counter = 1;
 
 //        most relevant:
@@ -1252,7 +1252,7 @@ class CkanManager
         fputcsv($fp_popularity, $csv_header);
         fputcsv($fp_relevance, $csv_header);
 
-        $ckan_url = 'https://catalog.data.gov/dataset/';
+        $ckan_url = CKAN_URL;
         $counter = 1;
 
 //        most relevant:
@@ -1468,7 +1468,7 @@ class CkanManager
         fputcsv($fp_popularity, $csv_header);
         fputcsv($fp_relevance, $csv_header);
 
-        $ckan_url = 'http://catalog.data.gov/dataset/';
+        $ckan_url = CKAN_URL;
 
         $counter = 1;
 
@@ -1982,7 +1982,7 @@ class CkanManager
         $terms
     ) {
         $this->say(ORGANIZATION_TO_EXPORT . PHP_EOL);
-        $ckan_url = 'http://catalog.data.gov/';
+        $ckan_url = CKAN_URL;
 //        $ckan_url = 'http://qa-catalog-fe-data.reisys.com/dataset/';
 //        $ckan_url = 'http://uat-catalog-fe-data.reisys.com/dataset/';
 
@@ -2343,7 +2343,7 @@ class CkanManager
                 [$dataset['name'], $newDatasetName = $dataset['name'] . '_legacy',]);
 
             if (LIST_ONLY) {
-                $this->say('http://catalog.data.gov/dataset/' . $dataset['name']);
+                $this->say(CKAN_URL . $dataset['name']);
             } else {
                 $this->say(str_pad($dataset['name'], 100, ' . '), '');
 
@@ -4044,7 +4044,7 @@ class CkanManager
                     $return[] = [
                         $package[0],
                         '',
-                        'http://catalog.data.gov/dataset/' . $dataset['name'],
+                        CKAN_URL . $dataset['name'],
                         '',
                         ''
                     ];
@@ -4068,9 +4068,9 @@ class CkanManager
 
             $return[] = [
                 $package[0],
-                'http://catalog.data.gov/dataset/' . $package[0],
-                'http://catalog.data.gov/dataset/' . $newDataset['name'],
-                'http://catalog.data.gov/dataset/' . $dataset['name'],
+                CKAN_URL . $package[0],
+                CKAN_URL . $newDataset['name'],
+                CKAN_URL . $dataset['name'],
                 $legacy_url
             ];
         }

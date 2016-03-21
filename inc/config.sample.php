@@ -2,6 +2,8 @@
 
 date_default_timezone_set('EST');
 
+define('CKAN_URL', 'https://catalog.data.gov/dataset/');
+
 /**
  * Agencies list info, including sub-agencies and terms
  * used to get terms tree for agency before each CKAN import
@@ -12,6 +14,10 @@ define('AGENCIES_LIST_URL', 'http://www.data.gov/app/themes/roots-nextdatagov/as
  * CKAN API URL
  */
 define('CKAN_API_URL', 'https://catalog.data.gov/api/3/');
+
+define('CKAN_STAGING_API_URL', 'https://catalog.data.gov/api/3/');
+
+define('SOCRATA_URL', 'https://explore.data.gov/api/views/');
 
 /**
  * CKAN API KEY
